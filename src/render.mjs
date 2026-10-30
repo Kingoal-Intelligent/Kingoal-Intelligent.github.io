@@ -52,7 +52,7 @@ function home(copy) {
   return `<div class="wrap">
     <section class="hero">
       ${kicker(homeCopy.kicker)}
-      <h1>${esc(homeCopy.title)}</h1>
+      <h1>${heroTitle(homeCopy)}</h1>
       <p class="lead">${esc(homeCopy.lead)}</p>
       <div class="actions">
         <a class="button" href="${esc(copy.paths.contact)}">${esc(homeCopy.primary)}</a>
@@ -355,21 +355,12 @@ function contact(copy) {
         <h2>${esc(contactCopy.factsTitle)}</h2>
         <ul class="fact-list">
           <li>
-            <span class="fact-label">${esc(contactCopy.phone)}</span>
-            <a href="${esc(copy.site.phoneHref)}">${esc(copy.site.phone)}</a>
-          </li>
-          <li>
-            <span class="fact-label">${esc(contactCopy.email)}</span>
-            <a href="mailto:${esc(copy.site.email)}">${esc(copy.site.email)}</a>
-          </li>
-          <li>
             <span class="fact-label">${esc(contactCopy.address)}</span>
             <span>${esc(copy.site.address)}</span>
           </li>
           <li>
             <span class="fact-label">${esc(contactCopy.hours)}</span>
             <span>${esc(copy.site.hours)}</span>
-            <span class="fact-note">${esc(copy.site.hoursNote)}</span>
           </li>
         </ul>
       </aside>
@@ -397,6 +388,11 @@ function area(name, label, hint) {
     <p class="field-hint" id="${name}-hint">${esc(hint)}</p>
     <p class="field-error" id="${name}-error" hidden></p>
   </div>`
+}
+
+function heroTitle(copy) {
+  if (!copy.titleLines) return esc(copy.title)
+  return copy.titleLines.map((line) => esc(line)).join("<br>")
 }
 
 function pageHead(kickerText, title) {
@@ -489,10 +485,6 @@ function footer(copy) {
         <p class="footer-name">${esc(copy.site.name)}</p>
         <p>${esc(copy.roleLine)}</p>
         <p>${esc(copy.site.address)}</p>
-      </div>
-      <div>
-        <p><a href="${esc(copy.site.phoneHref)}">${esc(copy.site.phone)}</a></p>
-        <p><a href="mailto:${esc(copy.site.email)}">${esc(copy.site.email)}</a></p>
       </div>
       <nav class="footer-nav" aria-label="${esc(copy.footerNav)}">${links}</nav>
     </div>

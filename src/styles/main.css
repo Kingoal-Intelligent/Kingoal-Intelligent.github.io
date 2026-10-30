@@ -297,6 +297,12 @@ main:focus {
   max-width: 12em;
 }
 
+:lang(zh-Hans) .hero h1 {
+  max-width: none;
+  text-wrap: wrap;
+  font-size: min(5.4rem, max(2.8rem, 6.4vw), calc((100vw - 2.75rem) / 8.2));
+}
+
 .lead,
 .section-lead {
   max-width: 42rem;
@@ -705,7 +711,7 @@ textarea[aria-invalid="true"] {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.4fr 1fr 1fr;
+  grid-template-columns: 1.4fr 1fr;
   gap: 2rem;
 }
 

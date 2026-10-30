@@ -1,25 +1,17 @@
-// Company name and contact details. Phone, email, and address are still placeholders.
-// 公司名称与联系方式。电话、邮箱和地址仍是占位。
+// Company name, address, and hours. Phone and email are not published.
+// 公司名称、地址与工作时间。电话和邮箱不对外展示。
 
 export const locales = {
   en: {
     htmlLang: "en",
     name: "Kingoal Tech",
-    phone: "+00 000 000 0000",
-    phoneHref: "tel:+000000000000",
-    email: "contact@example.com",
-    address: "City · Address placeholder",
-    hours: "Monday–Friday, 09:00–18:00",
-    hoursNote: "Timezone to be confirmed",
+    address: "Guangzhou, Guangdong, China",
+    hours: "Monday–Friday, 01:00–10:00 UTC",
   },
   zh: {
     htmlLang: "zh-Hans",
     name: "沁格智能",
-    phone: "+00 000 000 0000",
-    phoneHref: "tel:+000000000000",
-    email: "contact@example.com",
-    address: "城市 · 地址占位",
-    hours: "周一至周五 09:00–18:00",
-    hoursNote: "时区待定",
+    address: "中国广东广州",
+    hours: "周一至周五 01:00–10:00 UTC",
   },
 }
